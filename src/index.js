@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import $ from 'jquery';
+import { sonifyData } from './sonifyData';
 
 
 const options ={
@@ -55,13 +55,6 @@ const myPage = (
       <HighchartsReact highcharts={Highcharts} options={options} />
     </div></>
 );
-
-function sonifyData(){
-  $.ajax({
-    url: "",
-    context: document.body
-  })
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myPage);
